@@ -7,5 +7,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 include_once(base_path().'/routes/front/routes.php');
-
 include_once(base_path().'/routes/admin/routes.php');
