@@ -29,7 +29,6 @@ Route::group(['prefix' => 'user'], function () {
 });
 
 
-
 Route::group(['prefix' => 'admin'], function () {
 
     //Guest middleware
