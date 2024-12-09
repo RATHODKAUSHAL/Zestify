@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\Frontend\DashboardController;
+use App\Http\Controllers\user\DashboardController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Frontend\LoginController;
+use App\Http\Controllers\user\LoginController;
 use App\Http\Controllers\admin\LoginController as AdminLoginController;
 use App\Http\Controllers\admin\DashboardController as AdminDashboardController;
 
