@@ -19,6 +19,7 @@ Route::group(['prefix' => 'user'], function () {
         Route::get('register', [LoginController::class, 'register'])->name('user.register');
         Route::post('processregister', [LoginController::class, 'processregister'])->name('user.processregister');
     });
+    
     //Authenticated middleware
     Route::group(['middleware' => 'auth'], function () {
 
