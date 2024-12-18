@@ -18,7 +18,9 @@
         <div class="container mx-auto flex items-center justify-between w-full h-24">
             <!-- Logo -->
             <div class="font-bold text-4xl text-violet-700">
-                Zestify
+                <a href="/">
+                    Zestify
+                </a>
             </div>
             <!-- Location -->
             <div class="text-center">

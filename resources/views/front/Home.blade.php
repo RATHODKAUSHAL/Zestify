@@ -18,8 +18,8 @@
         ['name' => 'Garlic', 'price' => 20, 'image' => 'assets/front/Garlic.jpeg', 'time' => '15 Mins'],
         ['name' => 'Coconut', 'price' => 88, 'image' => 'assets/front/Coconut.jpeg', 'time' => '15 Mins'],
         ['name' => 'Banana', 'price' => 60, 'image' => 'assets/front/Banana.jpeg', 'time' => '15 Mins'],
-        ['name' => 'Capsicum_Green', 'price' => 173, 'image' => 'assets/front/Capsicum_Green.jpeg', 'time' => '15 Mins'],
-        ['name' => 'Curry_Leaves', 'price' => 58, 'image' => 'assets/front/Curry_Leaves.jpeg', 'time' => '15 Mins'],
+        ['name' => 'Capsicum Green', 'price' => 173, 'image' => 'assets/front/Capsicum_Green.jpeg', 'time' => '15 Mins'],
+        ['name' => 'Curry Leaves', 'price' => 58, 'image' => 'assets/front/Curry_Leaves.jpeg', 'time' => '15 Mins'],
     ];
 @endphp
 <div>
@@ -34,24 +34,26 @@
     </div>
     <div class="flex flex-row justify-between">
       @foreach($products as $product)
-      <div>
-        <div class="py-5">
-          <img src="{{ asset($product['image']) }}" alt="{{ $product['name'] }}" class="w-32 rounded-xl">
-        </div>
-        <div class="bg-green-400 justify-center w-20 items-center gap-1 flex flex-row text-xs p-1 rounded-md">
-          <i class="fa-regular fa-clock"></i>
-          <p>{{ $product['time'] }}</p>
-        </div>
+      <a href="{{ route('front.product') }}">
         <div>
-          <h3 class="text-base font-medium">{{ \Illuminate\Support\Str::limit($product['name'], 15) }}</h3>
+          <div class="py-5">
+            <img src="{{ asset($product['image']) }}" alt="{{ $product['name'] }}" class="w-32 rounded-xl">
+          </div>
+          <div class="bg-green-400 justify-center w-20 items-center gap-1 flex flex-row text-xs p-1 rounded-md">
+            <i class="fa-regular fa-clock"></i>
+            <p>{{ $product['time'] }}</p>
+          </div>
+          <div>
+            <h3 class="text-base font-medium">{{ \Illuminate\Support\Str::limit($product['name'], 15) }}</h3>
+          </div>
+          <div class="pt-10">
+            <p class="text-base font-medium">₹{{ $product['price'] }}</p>
+          </div>
+          <div class="pt-2">
+            <button class="border border-red-500 rounded-md p-2 px-5 font-medium hover:text-white hover:bg-red-500">Add To Cart</button>
+          </div>
         </div>
-        <div class="pt-10">
-          <p class="text-sm font-medium">₹{{ $product['price'] }}</p>
-        </div>
-        <div class="pt-2">
-          <button class="border border-red-500 rounded-md p-2 px-5 font-medium hover:text-white hover:bg-red-500">Add To Cart</button>
-        </div>
-      </div>
+      </a>
       @endforeach
     </div>
   </div>  
@@ -74,7 +76,7 @@
           <h3 class="text-base font-medium">{{ \Illuminate\Support\Str::limit($Fruit['name'], 15) }}</h3>
         </div>
         <div class="pt-10">
-          <p class="text-sm font-medium">₹{{ $Fruit['price'] }}</p>
+          <p class="text-base font-medium">₹{{ $Fruit['price'] }}</p>
         </div>
         <div class="pt-2">
           <button class="border border-red-500 rounded-md p-2 px-5 font-medium hover:text-white hover:bg-red-500">Add To Cart</button>
